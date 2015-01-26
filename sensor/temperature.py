@@ -4,7 +4,7 @@
 import random
 
 def randomize():
-    return round(random.uniform(0,100), 2)
+    return round(random.uniform(0, 100), 2)
 
 class Temperature(object):
     def __init__(self):
