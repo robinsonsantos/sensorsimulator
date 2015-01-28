@@ -12,5 +12,5 @@ public class Pressure extends Model {
 	@Id
 	@GeneratedValue
 	public Long id;
-	public int value;
+	public Integer value;
 }
