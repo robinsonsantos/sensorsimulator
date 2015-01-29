@@ -2,11 +2,7 @@ package controllers;
 
 import java.util.List;
 
-import org.h2.engine.Database;
-
 import models.User;
-import play.*;
-import play.db.ebean.Model;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
@@ -18,24 +14,28 @@ public class Application extends Controller {
     }
     
     public static Result createUser() {
-    	//User user = Json.fromJson(request().body().asJson(), User.class);    	
-    	//user.save();
+    	User user = Json.fromJson(request().body().asJson(), User.class);    	
+    	user.save();
     	return ok("Success");
     }
     
-    public static Result readUser(Long id) {    	
+    public static Result readUser(Long id) {
+    	User user = User.find.byId(id);
     	return TODO;
     }    
     
     public static Result readUsers() {
+    	List<User> users = User.find.all();
     	return TODO;
     }
     
-    public static Result updateUser() {
+    public static Result updateUser(User user) {
+    	user.save();
     	return TODO;
     }
     
-    public static Result deleteUser() {
+    public static Result deleteUser(User user) {
+    	user.delete();
     	return TODO;    	
     }
 }
