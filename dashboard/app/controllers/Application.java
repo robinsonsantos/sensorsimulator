@@ -21,7 +21,7 @@ public class Application extends Controller {
     
     public static Result readUser(Long id) {
     	User user = User.find.byId(id);
-    	return TODO;
+    	return ok(Json.toJson(user));
     }    
     
     public static Result readUsers() {
