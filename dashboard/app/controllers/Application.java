@@ -30,9 +30,9 @@ public class Application extends Controller {
     }
     
     public static Result updateUser(Long id) {
-    	User update = Json.fromJson(request().body().asJson(), User.class);  
+    	User updateUser = Json.fromJson(request().body().asJson(), User.class);  
     	User user = User.find.byId(id);
-    	user.setName(update.getName());
+        user.setName(updateUser.getName());
     	user.save();
     	return ok("Success");
     }
