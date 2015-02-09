@@ -29,9 +29,12 @@ public class Application extends Controller {
     	return ok(Json.toJson(users));
     }
     
-    public static Result updateUser(User user) {
+    public static Result updateUser(Long id) {
+    	User update = Json.fromJson(request().body().asJson(), User.class);  
+    	User user = User.find.byId(id);
+    	user.setName(update.getName());
     	user.save();
-    	return TODO;
+    	return ok("Success");
     }
     
     public static Result deleteUser(Long id) {
