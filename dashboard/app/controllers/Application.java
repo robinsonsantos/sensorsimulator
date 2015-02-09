@@ -34,8 +34,9 @@ public class Application extends Controller {
     	return TODO;
     }
     
-    public static Result deleteUser(User user) {
+    public static Result deleteUser(Long id) {
+        User user = User.find.byId(id);
     	user.delete();
-    	return TODO;    	
+    	return ok("Success");    	
     }
 }
