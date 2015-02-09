@@ -33,7 +33,7 @@ public class Application extends Controller {
     	User update = Json.fromJson(request().body().asJson(), User.class);  
     	User user = User.find.byId(id);
     	user.setName(update.getName());
-    	user.save();
+    	user.update();
     	return ok("Success");
     }
     
