@@ -26,7 +26,7 @@ public class Application extends Controller {
     
     public static Result readUsers() {
     	List<User> users = User.find.all();
-    	return TODO;
+    	return ok(Json.toJson(users));
     }
     
     public static Result updateUser(User user) {
