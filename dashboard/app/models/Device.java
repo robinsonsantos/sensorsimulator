@@ -14,7 +14,7 @@ public class Device extends Model {
     @Id
     @GeneratedValue
     public Long id;
-    public String token;
+    public String uuid;
     public String name;
     public String value;
 
