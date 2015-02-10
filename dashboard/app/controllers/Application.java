@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.List;
+import java.util.UUID;
 
 import models.User;
 import models.Device;
@@ -50,6 +51,7 @@ public class Application extends Controller {
     public static Result createDevice() {
         //Device device = Json.fromJson(request().body().asJson(), Device.class);
         Device device = Form.form(Device.class).bindFromRequest().get(); 
+        device.setUuid(UUID.randomUUID().toString());
     	device.save();
     	//return ok("Success");
         return redirect(routes.Application.index());
