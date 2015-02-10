@@ -18,7 +18,9 @@ public class Application extends Controller {
     public static Result createUser() {
     	User user = Json.fromJson(request().body().asJson(), User.class);    	
     	user.save();
-    	return ok("Success");
+        return ok();
+    	//return ok("Success");
+        //return ok("{status: 200}").as("application/json");
     }
     
     public static Result readUser(Long id) {
