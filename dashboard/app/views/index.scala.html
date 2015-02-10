@@ -2,6 +2,11 @@
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+    <form action="@routes.Application.createDevice()" method="POST">
+      <input type="text" name="uuid" />
+      <input type="text" name="name" />
+      <input type="text" name="valueType" />
+      <button>Create Device</button>
+    </form>
 
 }
