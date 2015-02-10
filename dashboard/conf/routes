@@ -6,11 +6,11 @@
 GET     /                           controllers.Application.index()
 
 # User
-GET     /users                      controllers.Application.readUsers()
-GET     /users/:id                  controllers.Application.readUser(id: Long)
-POST    /users                      controllers.Application.createUser()
-PUT     /users/:id                  controllers.Application.updateUser(id: Long)
-DELETE  /users/:id                  controllers.Application.deleteUser(id: Long)
+GET     /api/v1/users                      controllers.Application.readUsers()
+GET     /api/v1/users/:id                  controllers.Application.readUser(id: Long)
+POST    /api/v1/users                      controllers.Application.createUser()
+PUT     /api/v1/users/:id                  controllers.Application.updateUser(id: Long)
+DELETE  /api/v1/users/:id                  controllers.Application.deleteUser(id: Long)
 
 # Device
 GET     /devices                    controllers.Application.readDevices()
