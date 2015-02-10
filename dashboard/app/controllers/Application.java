@@ -7,6 +7,7 @@ import models.Device;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
+import play.data.Form;
 
 public class Application extends Controller {
 
@@ -45,8 +46,15 @@ public class Application extends Controller {
     }
 
     public static Result createDevice() {
-        Device device = Json.fromJson(request().body().asJson(), Device.class);
+        //Device device = Json.fromJson(request().body().asJson(), Device.class);
+        Device device = Form.form(Device.class).bindFromRequest().get(); 
     	device.save();
-    	return ok("Success");
+    	//return ok("Success");
+        return redirect(routes.Application.index());
+    }
+
+    public static Result readDevices() {
+    	List<Device> devices = Device.find.all();
+    	return ok(Json.toJson(devices));
     }
 }
