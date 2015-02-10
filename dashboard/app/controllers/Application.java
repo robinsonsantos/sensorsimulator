@@ -42,4 +42,12 @@ public class Application extends Controller {
     	user.delete();
     	return ok("Success");    	
     }
+
+    public static Result createDevice() {
+        Device device = Json.fromJson(request().body().asJson(), Device.class);
+    	device.save();
+    	return ok("Success");
+    }
+
+
 }
