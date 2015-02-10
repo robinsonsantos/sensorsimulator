@@ -7,7 +7,8 @@ To start the application:
 And then http://localhost:9000
 
 To use the REST API:
-	curl -X POST http://localhost:9000/users -H "Content-Type: application/json" -d "{\"name\": \"user_\"}"
-	curl -X GET http://localhost:9000/users/1
-	curl -X DELETE http://localhost:9000/users/1
-	curl -X PUT http://localhost:9000/users/1 -H "Content-Type: application/json" -d "{\"name\": \"update_\"}"
+
+curl -X POST http://localhost:9000/api/v1/users -H "Content-Type: application/json" -d "{\"name\": \"user_\"}"
+curl -X GET http://localhost:9000/api/v1/users/1
+curl -X DELETE http://localhost:9000/api/v1/users/1
+curl -X PUT http://localhost:9000/api/v1/users/1 -H "Content-Type: application/json" -d "{\"name\": \"update_\"}"
