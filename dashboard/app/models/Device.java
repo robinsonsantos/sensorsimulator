@@ -16,7 +16,7 @@ public class Device extends Model {
     public Long id;
     public String uuid;
     public String name;
-    public String value;
+    public String valueType;
 
     public static Model.Finder<Long, Device> find =
                     new Model.Finder<Long, Device>(Long.class, Device.class);        
