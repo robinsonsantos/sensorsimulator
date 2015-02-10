@@ -3,6 +3,7 @@ package controllers;
 import java.util.List;
 
 import models.User;
+import models.Device;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
@@ -48,6 +49,4 @@ public class Application extends Controller {
     	device.save();
     	return ok("Success");
     }
-
-
 }
