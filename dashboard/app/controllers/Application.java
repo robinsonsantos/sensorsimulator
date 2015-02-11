@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import models.User;
 import models.Device;
+import models.Record;
+
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
@@ -60,5 +62,16 @@ public class Application extends Controller {
     public static Result readDevices() {
     	List<Device> devices = Device.find.all();
     	return ok(Json.toJson(devices));
+    }
+
+    public static Result createRecord() {
+        Record record = Json.fromJson(request().body().asJson(), Record.class);
+        record.save();
+        return ok();
+    }
+
+    public static Result readRecords() {
+        List<Record> records = Record.find.all();
+        return ok(Json.toJson(records));
     }
 }
