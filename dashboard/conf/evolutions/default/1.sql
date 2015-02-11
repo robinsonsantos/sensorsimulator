@@ -23,6 +23,12 @@ create table pressure (
   constraint pk_pressure primary key (id))
 ;
 
+create table record (
+  id                        bigint not null,
+  name                      varchar(255),
+  constraint pk_record primary key (id))
+;
+
 create table temperature (
   id                        bigint not null,
   value                     float,
@@ -41,6 +47,8 @@ create sequence humidity_seq;
 
 create sequence pressure_seq;
 
+create sequence record_seq;
+
 create sequence temperature_seq;
 
 create sequence user_seq;
@@ -58,6 +66,8 @@ drop table if exists humidity;
 
 drop table if exists pressure;
 
+drop table if exists record;
+
 drop table if exists temperature;
 
 drop table if exists user;
@@ -69,6 +79,8 @@ drop sequence if exists device_seq;
 drop sequence if exists humidity_seq;
 
 drop sequence if exists pressure_seq;
+
+drop sequence if exists record_seq;
 
 drop sequence if exists temperature_seq;
 
