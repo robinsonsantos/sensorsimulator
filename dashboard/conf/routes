@@ -21,5 +21,7 @@ POST    /api/v1/devices             controllers.Devices.createDevice()
 GET     /records                    controllers.Application.readRecords()
 POST    /records                    controllers.Application.createRecord()
 
+# Graphic
+GET     /graphics                   controllers.Graphics.index()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
