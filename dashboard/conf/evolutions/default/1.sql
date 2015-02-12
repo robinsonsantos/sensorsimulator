@@ -25,7 +25,9 @@ create table pressure (
 
 create table record (
   id                        bigint not null,
-  name                      varchar(255),
+  uuid                      varchar(255),
+  value                     varchar(255),
+  created_at                varchar(255),
   constraint pk_record primary key (id))
 ;
 
