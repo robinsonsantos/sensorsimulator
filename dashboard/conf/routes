@@ -13,8 +13,9 @@ PUT     /api/v1/users/:id           controllers.Application.updateUser(id: Long)
 DELETE  /api/v1/users/:id           controllers.Application.deleteUser(id: Long)
 
 # Device
-GET     /devices                    controllers.Application.readDevices()
-POST    /devices                    controllers.Application.createDevice()
+GET     /devices                    controllers.Devices.index()
+GET     /api/v1/devices             controllers.Devices.readDevices()
+POST    /api/v1/devices             controllers.Devices.createDevice()
 
 # Record
 GET     /records                    controllers.Application.readRecords()
