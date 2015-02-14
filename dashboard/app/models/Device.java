@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import play.db.ebean.*;
+import play.db.ebean.Model;
 
 @Entity
 public class Device extends Model {

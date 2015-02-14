@@ -5,7 +5,7 @@ import views.html.Graphics.*;
 
 public class Graphics extends Controller {
 
-    public static Result index() {
-        return ok(index.render());
+    public static Result show() {
+        return ok(show.render());
     }
 }
