@@ -1,7 +1,7 @@
 package controllers;
 
 import play.mvc.*;
-import views.html.graphics_.*;
+import views.html.Graphics.*;
 
 public class Graphics extends Controller {
 

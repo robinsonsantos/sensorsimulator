@@ -7,7 +7,7 @@ import models.Device;
 
 import play.libs.Json;
 import play.mvc.*;
-import views.html.devices_.*;
+import views.html.Devices.*;
 import play.data.Form;
 
 
